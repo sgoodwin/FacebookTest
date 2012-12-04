@@ -1,3 +1,2 @@
-- Get the app to post notifications on your behalf
 - Get the app to access my wall (Steven Lammertink)
 - Extra credit: When a user table cell is selected, show a UIMapView and show a pin where the last known location for that user was.

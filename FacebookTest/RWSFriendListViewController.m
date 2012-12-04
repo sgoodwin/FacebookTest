@@ -10,6 +10,7 @@
 #import "RWSFriendList.h"
 #import "RWSFriend.h"
 #import "RWSFriendCell.h"
+#import <Social/Social.h>
 
 @interface RWSFriendListViewController()
 @property (nonatomic, strong) RWSFriendList *friendList;
@@ -23,6 +24,10 @@ static NSString *const CellIdentifier = @"Cell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.title = @"Friends";
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(postSomething:)];
 
     self.imageManager = [[RWSImageManager alloc] initWithDelegate:self];
     [self.tableView registerClass:[RWSFriendCell class] forCellReuseIdentifier:CellIdentifier];
@@ -42,6 +47,14 @@ static NSString *const CellIdentifier = @"Cell";
         }
         [self.tableView reloadData];
     });
+}
+
+- (void)postSomething:(id)sender
+{
+    SLComposeViewController *compose = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [compose setInitialText:@"Hello from the test app!"];
+    compose.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:compose animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source

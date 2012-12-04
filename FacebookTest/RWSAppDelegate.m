@@ -19,7 +19,9 @@
     [self.window makeKeyAndVisible];
 
     RWSFriendListViewController *controller = [[RWSFriendListViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.window.rootViewController = controller;
+
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+    self.window.rootViewController = navigationController;
     return YES;
 }
 
