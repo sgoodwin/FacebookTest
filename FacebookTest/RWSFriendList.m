@@ -13,25 +13,13 @@
 
 @implementation RWSFriendList
 
-- (void)update
+- (void)requestPermissionTo:(ACAccountStoreRequestAccessCompletionHandler)block
 {
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
-    NSArray *permissions = @[@"email", @"user_location", @"user_about_me"];
+    NSArray *permissions = @[@"email", @"user_location", @"user_about_me", @"friends_location"];
     NSDictionary *options = @{ACFacebookAppIdKey : @"468767743162251", ACFacebookPermissionsKey : permissions, ACFacebookAudienceKey : ACFacebookAudienceOnlyMe};
-    [accountStore requestAccessToAccountsWithType:accountType options:options completion:^(BOOL granted, NSError *error) {
-        if(granted){
-            [self getFriendListWithPermission];
-        }else{
-            self.error = error;
-            self.friends = @[];
-        }
-    }];
-
-    RWSFriend *friend = [[RWSFriend alloc] init];
-    friend.firstName = @"Paul";
-    friend.lastName = @"Newman";
-    self.friends = @[friend];
+    [accountStore requestAccessToAccountsWithType:accountType options:options completion:block];
 }
 
 - (void)getFriendListWithPermission
@@ -43,7 +31,7 @@
     ACAccount *account = accounts[0];
 
     NSURL *url = [NSURL URLWithString:@"https://graph.facebook.com/me/friends"];
-    SLRequest *friendRequest = [SLRequest requestForServiceType:SLServiceTypeFacebook requestMethod:SLRequestMethodGET URL:url parameters:nil];
+    SLRequest *friendRequest = [SLRequest requestForServiceType:SLServiceTypeFacebook requestMethod:SLRequestMethodGET URL:url parameters:@{@"fields": @"name,location"}];
     [friendRequest setAccount:account];
     [friendRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
         if(responseData){
@@ -78,6 +66,18 @@
 - (NSUInteger)friendCount
 {
     return [self.friends count];
+}
+
+- (void)update
+{
+    [self requestPermissionTo:^(BOOL granted, NSError *error) {
+        if(granted){
+            [self getFriendListWithPermission];
+        }else{
+            self.error = error;
+            self.friends = @[];
+        }
+    }];
 }
 
 @end

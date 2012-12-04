@@ -22,6 +22,11 @@
             friend.lastName = names[1];
         }
 
+
+        if(obj[@"location"]){
+            friend.location = obj[@"location"][@"name"];
+        }
+
         NSString *userID = obj[@"id"];
         friend.imageURLString = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?width=60&height=60", userID];
         [results addObject:friend];

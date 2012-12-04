@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class RWSFriend;
+
 @interface RWSFriendList : NSObject
 @property (nonatomic, strong) NSArray *friends;
 @property (nonatomic, strong) NSError *error;

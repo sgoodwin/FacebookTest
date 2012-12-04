@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B209F52166E4E76000438F9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B209F51166E4E76000438F9 /* CoreLocation.framework */; };
+		9B209F56166E4F33000438F9 /* RWSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B209F55166E4F33000438F9 /* RWSLocation.m */; };
 		9BD477FB166E384700EC0700 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD477FA166E384700EC0700 /* UIKit.framework */; };
 		9BD477FD166E384700EC0700 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD477FC166E384700EC0700 /* Foundation.framework */; };
 		9BD477FF166E384700EC0700 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD477FE166E384700EC0700 /* CoreGraphics.framework */; };
@@ -26,9 +28,15 @@
 		9BD4782B166E3C2F00EC0700 /* web.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4782A166E3C2F00EC0700 /* web.jpg */; };
 		9BD4782F166E47FE00EC0700 /* RWSStevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4782D166E47FE00EC0700 /* RWSStevenViewController.m */; };
 		9BD47830166E47FE00EC0700 /* RWSStevenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4782E166E47FE00EC0700 /* RWSStevenViewController.xib */; };
+		9BD47834166E4B0300EC0700 /* RWSFriendLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD47832166E4B0300EC0700 /* RWSFriendLocationViewController.m */; };
+		9BD47835166E4B0300EC0700 /* RWSFriendLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD47833166E4B0300EC0700 /* RWSFriendLocationViewController.xib */; };
+		9BD47837166E4B1C00EC0700 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD47836166E4B1C00EC0700 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B209F51166E4E76000438F9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9B209F54166E4F33000438F9 /* RWSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSLocation.h; sourceTree = "<group>"; };
+		9B209F55166E4F33000438F9 /* RWSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSLocation.m; sourceTree = "<group>"; };
 		9BD477F7166E384700EC0700 /* FacebookTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD477FA166E384700EC0700 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BD477FC166E384700EC0700 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +66,10 @@
 		9BD4782C166E47FE00EC0700 /* RWSStevenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSStevenViewController.h; sourceTree = "<group>"; };
 		9BD4782D166E47FE00EC0700 /* RWSStevenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSStevenViewController.m; sourceTree = "<group>"; };
 		9BD4782E166E47FE00EC0700 /* RWSStevenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWSStevenViewController.xib; sourceTree = "<group>"; };
+		9BD47831166E4B0200EC0700 /* RWSFriendLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSFriendLocationViewController.h; sourceTree = "<group>"; };
+		9BD47832166E4B0300EC0700 /* RWSFriendLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSFriendLocationViewController.m; sourceTree = "<group>"; };
+		9BD47833166E4B0300EC0700 /* RWSFriendLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWSFriendLocationViewController.xib; sourceTree = "<group>"; };
+		9BD47836166E4B1C00EC0700 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B209F52166E4E76000438F9 /* CoreLocation.framework in Frameworks */,
+				9BD47837166E4B1C00EC0700 /* MapKit.framework in Frameworks */,
 				9BD4781D166E397800EC0700 /* Social.framework in Frameworks */,
 				9BD4781B166E397100EC0700 /* Accounts.framework in Frameworks */,
 				9BD477FB166E384700EC0700 /* UIKit.framework in Frameworks */,
@@ -96,6 +110,8 @@
 		9BD477F9166E384700EC0700 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B209F51166E4E76000438F9 /* CoreLocation.framework */,
+				9BD47836166E4B1C00EC0700 /* MapKit.framework */,
 				9BD4781C166E397800EC0700 /* Social.framework */,
 				9BD4781A166E397100EC0700 /* Accounts.framework */,
 				9BD477FA166E384700EC0700 /* UIKit.framework */,
@@ -124,6 +140,11 @@
 				9BD4782C166E47FE00EC0700 /* RWSStevenViewController.h */,
 				9BD4782D166E47FE00EC0700 /* RWSStevenViewController.m */,
 				9BD4782E166E47FE00EC0700 /* RWSStevenViewController.xib */,
+				9BD47831166E4B0200EC0700 /* RWSFriendLocationViewController.h */,
+				9BD47832166E4B0300EC0700 /* RWSFriendLocationViewController.m */,
+				9BD47833166E4B0300EC0700 /* RWSFriendLocationViewController.xib */,
+				9B209F54166E4F33000438F9 /* RWSLocation.h */,
+				9B209F55166E4F33000438F9 /* RWSLocation.m */,
 			);
 			path = FacebookTest;
 			sourceTree = "<group>";
@@ -201,6 +222,7 @@
 				9BD47811166E384700EC0700 /* Default-568h@2x.png in Resources */,
 				9BD4782B166E3C2F00EC0700 /* web.jpg in Resources */,
 				9BD47830166E47FE00EC0700 /* RWSStevenViewController.xib in Resources */,
+				9BD47835166E4B0300EC0700 /* RWSFriendLocationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +241,8 @@
 				9BD47826166E3B7A00EC0700 /* RWSFriendCell.m in Sources */,
 				9BD47829166E3BBE00EC0700 /* RWSImageManager.m in Sources */,
 				9BD4782F166E47FE00EC0700 /* RWSStevenViewController.m in Sources */,
+				9BD47834166E4B0300EC0700 /* RWSFriendLocationViewController.m in Sources */,
+				9B209F56166E4F33000438F9 /* RWSLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +359,7 @@
 				9BD47816166E384700EC0700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,6 +12,7 @@
 #import "RWSFriendCell.h"
 #import <Social/Social.h>
 #import "RWSStevenViewController.h"
+#import "RWSFriendLocationViewController.h"
 
 @interface RWSFriendListViewController()
 @property (nonatomic, strong) RWSFriendList *friendList;
@@ -92,6 +93,17 @@ static NSString *const CellIdentifier = @"Cell";
     }
     cell.imageView.image = image;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RWSFriend *afriend = [self.friendList friendAtIndex:indexPath.row];
+    if(afriend.location){
+        RWSFriendLocationViewController *controller = [[RWSFriendLocationViewController alloc] initWithFriend:afriend];
+        [self.navigationController pushViewController:controller animated:YES];
+    }else{
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 }
 
 #pragma mark - RWSImageManagerDelegate

@@ -11,6 +11,7 @@
 @interface RWSFriend : NSObject
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSString *location;
 @property (nonatomic, strong) NSString *imageURLString;
 
 + (NSArray *)friendsFromJSONArray:(NSArray *)jsonArray;
