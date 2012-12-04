@@ -11,6 +11,7 @@
 #import "RWSFriend.h"
 #import "RWSFriendCell.h"
 #import <Social/Social.h>
+#import "RWSStevenViewController.h"
 
 @interface RWSFriendListViewController()
 @property (nonatomic, strong) RWSFriendList *friendList;
@@ -28,6 +29,7 @@ static NSString *const CellIdentifier = @"Cell";
     self.title = @"Friends";
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(postSomething:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Steven" style:UIBarButtonItemStylePlain target:self action:@selector(showSteven:)];
 
     self.imageManager = [[RWSImageManager alloc] initWithDelegate:self];
     [self.tableView registerClass:[RWSFriendCell class] forCellReuseIdentifier:CellIdentifier];
@@ -55,6 +57,13 @@ static NSString *const CellIdentifier = @"Cell";
     [compose setInitialText:@"Hello from the test app!"];
     compose.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:compose animated:YES completion:nil];
+}
+
+- (void)showSteven:(id)sender
+{
+    RWSStevenViewController *stevenController = [[RWSStevenViewController alloc] init];
+    stevenController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:stevenController animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source

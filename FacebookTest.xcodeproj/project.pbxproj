@@ -24,6 +24,8 @@
 		9BD47826166E3B7A00EC0700 /* RWSFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD47825166E3B7A00EC0700 /* RWSFriendCell.m */; };
 		9BD47829166E3BBE00EC0700 /* RWSImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD47828166E3BBE00EC0700 /* RWSImageManager.m */; };
 		9BD4782B166E3C2F00EC0700 /* web.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4782A166E3C2F00EC0700 /* web.jpg */; };
+		9BD4782F166E47FE00EC0700 /* RWSStevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4782D166E47FE00EC0700 /* RWSStevenViewController.m */; };
+		9BD47830166E47FE00EC0700 /* RWSStevenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4782E166E47FE00EC0700 /* RWSStevenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,9 @@
 		9BD47827166E3BBE00EC0700 /* RWSImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSImageManager.h; sourceTree = "<group>"; };
 		9BD47828166E3BBE00EC0700 /* RWSImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSImageManager.m; sourceTree = "<group>"; };
 		9BD4782A166E3C2F00EC0700 /* web.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = web.jpg; sourceTree = "<group>"; };
+		9BD4782C166E47FE00EC0700 /* RWSStevenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSStevenViewController.h; sourceTree = "<group>"; };
+		9BD4782D166E47FE00EC0700 /* RWSStevenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSStevenViewController.m; sourceTree = "<group>"; };
+		9BD4782E166E47FE00EC0700 /* RWSStevenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWSStevenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +121,9 @@
 				9BD47825166E3B7A00EC0700 /* RWSFriendCell.m */,
 				9BD47827166E3BBE00EC0700 /* RWSImageManager.h */,
 				9BD47828166E3BBE00EC0700 /* RWSImageManager.m */,
+				9BD4782C166E47FE00EC0700 /* RWSStevenViewController.h */,
+				9BD4782D166E47FE00EC0700 /* RWSStevenViewController.m */,
+				9BD4782E166E47FE00EC0700 /* RWSStevenViewController.xib */,
 			);
 			path = FacebookTest;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				9BD4780F166E384700EC0700 /* Default@2x.png in Resources */,
 				9BD47811166E384700EC0700 /* Default-568h@2x.png in Resources */,
 				9BD4782B166E3C2F00EC0700 /* web.jpg in Resources */,
+				9BD47830166E47FE00EC0700 /* RWSStevenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +218,7 @@
 				9BD47823166E3A8400EC0700 /* RWSFriend.m in Sources */,
 				9BD47826166E3B7A00EC0700 /* RWSFriendCell.m in Sources */,
 				9BD47829166E3BBE00EC0700 /* RWSImageManager.m in Sources */,
+				9BD4782F166E47FE00EC0700 /* RWSStevenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
