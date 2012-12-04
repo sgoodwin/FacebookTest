@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RWSImageManager.h"
 
-@interface RWSFriendListViewController : UITableViewController
+@interface RWSFriendListViewController : UITableViewController<RWSImageManagerDelegate>
 @end

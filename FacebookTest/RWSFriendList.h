@@ -11,6 +11,7 @@
 @class RWSFriend;
 @interface RWSFriendList : NSObject
 @property (nonatomic, strong) NSArray *friends;
+@property (nonatomic, strong) NSError *error;
 @property (nonatomic, readonly) NSUInteger friendCount;
 
 - (RWSFriend *)friendAtIndex:(NSUInteger)index;

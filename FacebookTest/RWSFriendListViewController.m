@@ -10,7 +10,6 @@
 #import "RWSFriendList.h"
 #import "RWSFriend.h"
 #import "RWSFriendCell.h"
-#import "RWSImageManager.h"
 
 @interface RWSFriendListViewController()
 @property (nonatomic, strong) RWSFriendList *friendList;
@@ -25,7 +24,7 @@ static NSString *const CellIdentifier = @"Cell";
 {
     [super viewDidLoad];
 
-    self.imageManager = [[RWSImageManager alloc] init];
+    self.imageManager = [[RWSImageManager alloc] initWithDelegate:self];
     [self.tableView registerClass:[RWSFriendCell class] forCellReuseIdentifier:CellIdentifier];
 
     self.friendList = [[RWSFriendList alloc] init];
@@ -35,10 +34,22 @@ static NSString *const CellIdentifier = @"Cell";
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    [self.tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if([self.friendList error]){
+            NSString *errorMessage = [[self.friendList error] localizedDescription];
+            NSString *message = [NSString stringWithFormat:@"Something went wrong loading your friend list. %@", errorMessage];
+            [[[UIAlertView alloc] initWithTitle:@"Oops" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        }
+        [self.tableView reloadData];
+    });
 }
 
 #pragma mark - Table view data source
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 61.0f;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -52,8 +63,20 @@ static NSString *const CellIdentifier = @"Cell";
     RWSFriend *friend = [self.friendList friendAtIndex:indexPath.row];
     cell.textLabel.text = friend.firstName;
     cell.detailTextLabel.text = friend.lastName;
-    cell.imageView.image = [self.imageManager imageForIndexPath:indexPath];
+
+    UIImage *image = [self.imageManager imageForIndexPath:indexPath];
+    if(!image){
+        [self.imageManager loadImageAtURLString:friend.imageURLString forIndexPath:indexPath];
+    }
+    cell.imageView.image = image;
     return cell;
+}
+
+#pragma mark - RWSImageManagerDelegate
+
+- (void)imageManage:(RWSImageManager *)manager didLoadImageAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 @end
