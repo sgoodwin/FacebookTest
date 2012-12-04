@@ -16,6 +16,14 @@
 		9BD4780D166E384700EC0700 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4780C166E384700EC0700 /* Default.png */; };
 		9BD4780F166E384700EC0700 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4780E166E384700EC0700 /* Default@2x.png */; };
 		9BD47811166E384700EC0700 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD47810166E384700EC0700 /* Default-568h@2x.png */; };
+		9BD47819166E388D00EC0700 /* RWSFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD47818166E388D00EC0700 /* RWSFriendListViewController.m */; };
+		9BD4781B166E397100EC0700 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD4781A166E397100EC0700 /* Accounts.framework */; };
+		9BD4781D166E397800EC0700 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD4781C166E397800EC0700 /* Social.framework */; };
+		9BD47820166E39A100EC0700 /* RWSFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4781F166E39A100EC0700 /* RWSFriendList.m */; };
+		9BD47823166E3A8400EC0700 /* RWSFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD47822166E3A8400EC0700 /* RWSFriend.m */; };
+		9BD47826166E3B7A00EC0700 /* RWSFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD47825166E3B7A00EC0700 /* RWSFriendCell.m */; };
+		9BD47829166E3BBE00EC0700 /* RWSImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD47828166E3BBE00EC0700 /* RWSImageManager.m */; };
+		9BD4782B166E3C2F00EC0700 /* web.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4782A166E3C2F00EC0700 /* web.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,19 @@
 		9BD4780C166E384700EC0700 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9BD4780E166E384700EC0700 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9BD47810166E384700EC0700 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9BD47817166E388D00EC0700 /* RWSFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSFriendListViewController.h; sourceTree = "<group>"; };
+		9BD47818166E388D00EC0700 /* RWSFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSFriendListViewController.m; sourceTree = "<group>"; };
+		9BD4781A166E397100EC0700 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9BD4781C166E397800EC0700 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9BD4781E166E39A100EC0700 /* RWSFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSFriendList.h; sourceTree = "<group>"; };
+		9BD4781F166E39A100EC0700 /* RWSFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSFriendList.m; sourceTree = "<group>"; };
+		9BD47821166E3A8400EC0700 /* RWSFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSFriend.h; sourceTree = "<group>"; };
+		9BD47822166E3A8400EC0700 /* RWSFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSFriend.m; sourceTree = "<group>"; };
+		9BD47824166E3B7A00EC0700 /* RWSFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSFriendCell.h; sourceTree = "<group>"; };
+		9BD47825166E3B7A00EC0700 /* RWSFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSFriendCell.m; sourceTree = "<group>"; };
+		9BD47827166E3BBE00EC0700 /* RWSImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWSImageManager.h; sourceTree = "<group>"; };
+		9BD47828166E3BBE00EC0700 /* RWSImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWSImageManager.m; sourceTree = "<group>"; };
+		9BD4782A166E3C2F00EC0700 /* web.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = web.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD4781D166E397800EC0700 /* Social.framework in Frameworks */,
+				9BD4781B166E397100EC0700 /* Accounts.framework in Frameworks */,
 				9BD477FB166E384700EC0700 /* UIKit.framework in Frameworks */,
 				9BD477FD166E384700EC0700 /* Foundation.framework in Frameworks */,
 				9BD477FF166E384700EC0700 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +91,8 @@
 		9BD477F9166E384700EC0700 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BD4781C166E397800EC0700 /* Social.framework */,
+				9BD4781A166E397100EC0700 /* Accounts.framework */,
 				9BD477FA166E384700EC0700 /* UIKit.framework */,
 				9BD477FC166E384700EC0700 /* Foundation.framework */,
 				9BD477FE166E384700EC0700 /* CoreGraphics.framework */,
@@ -81,6 +106,16 @@
 				9BD47809166E384700EC0700 /* RWSAppDelegate.h */,
 				9BD4780A166E384700EC0700 /* RWSAppDelegate.m */,
 				9BD47801166E384700EC0700 /* Supporting Files */,
+				9BD47817166E388D00EC0700 /* RWSFriendListViewController.h */,
+				9BD47818166E388D00EC0700 /* RWSFriendListViewController.m */,
+				9BD4781E166E39A100EC0700 /* RWSFriendList.h */,
+				9BD4781F166E39A100EC0700 /* RWSFriendList.m */,
+				9BD47821166E3A8400EC0700 /* RWSFriend.h */,
+				9BD47822166E3A8400EC0700 /* RWSFriend.m */,
+				9BD47824166E3B7A00EC0700 /* RWSFriendCell.h */,
+				9BD47825166E3B7A00EC0700 /* RWSFriendCell.m */,
+				9BD47827166E3BBE00EC0700 /* RWSImageManager.h */,
+				9BD47828166E3BBE00EC0700 /* RWSImageManager.m */,
 			);
 			path = FacebookTest;
 			sourceTree = "<group>";
@@ -88,6 +123,7 @@
 		9BD47801166E384700EC0700 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9BD4782A166E3C2F00EC0700 /* web.jpg */,
 				9BD47802166E384700EC0700 /* FacebookTest-Info.plist */,
 				9BD47803166E384700EC0700 /* InfoPlist.strings */,
 				9BD47806166E384700EC0700 /* main.m */,
@@ -155,6 +191,7 @@
 				9BD4780D166E384700EC0700 /* Default.png in Resources */,
 				9BD4780F166E384700EC0700 /* Default@2x.png in Resources */,
 				9BD47811166E384700EC0700 /* Default-568h@2x.png in Resources */,
+				9BD4782B166E3C2F00EC0700 /* web.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +204,11 @@
 			files = (
 				9BD47807166E384700EC0700 /* main.m in Sources */,
 				9BD4780B166E384700EC0700 /* RWSAppDelegate.m in Sources */,
+				9BD47819166E388D00EC0700 /* RWSFriendListViewController.m in Sources */,
+				9BD47820166E39A100EC0700 /* RWSFriendList.m in Sources */,
+				9BD47823166E3A8400EC0700 /* RWSFriend.m in Sources */,
+				9BD47826166E3B7A00EC0700 /* RWSFriendCell.m in Sources */,
+				9BD47829166E3BBE00EC0700 /* RWSImageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
